@@ -11,23 +11,11 @@ public class CameraFollower : MonoBehaviour
 
     private void Start()
     {
-        // _target.position + _offset = _camera;
-        ///_camera = GetComponent<Camera>().transform;
         _offset = _camera.position - _target.position;
-    }
-
-    private void Update()
-    {
-        
     }
 
     private void LateUpdate()
     {
         _camera.position = _target.position + _offset;
-        
-    }
-
-    private void FixedUpdate()
-    {
     }
 }
